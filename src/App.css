@@ -1,38 +1,493 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+body {
+  overflow-x: hidden;
+  background: #000;
+  border: 2px solid var(--yellow);
+  height: auto;
+  min-height: 99vh;
+  border-radius: 10px;
+}
+:root {
+  --yellow: #fbff22;
+  --font: "Lato", sans-serif;
+  --f-poppins: "Poppins", sans-serif;
+  --gray: #999999;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  transition: all 0.3s;
+  width: 92%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.headerNone{
+  display: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  padding: 40px 0;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+nav a svg {
+  width: 40px;
+  height: 40px;
+}
+
+nav p {
+  color: #fff;
+
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.contact__btn {
+  color: #fbff22;
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+  padding: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 5px;
+  border: 2px solid #fbff22;
+  background: none;
+}
+
+main {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__left {
+  width: 100%;
+}
+
+.main__left h2 {
+  color: #fff;
+
+  /* Heading 2 */
+  font-family: var(--font);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+h1 {
+  color: #fbff22;
+  font-family: var(--font);
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+
+.main__left h3 {
+  color: var(--gray);
+  font-family: var(--f-poppins);
+  font-size: 30px;
+  font-weight: 500;
+}
+.hr {
+  margin: 45px 0 20px;
+  width: 40px;
+  height: 3px;
+  background: var(--gray);
+}
+
+.main__left p {
+  color: var(--gray);
+  font-family: var(--f-poppins);
+  font-size: 20px;
+  line-height: 30px;
+  text-align: justify;
+  width: 90%;
+  overflow: hidden;
+}
+
+.main__right {
+  width: 60%;
+}
+
+.main__right img {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.project {
+  position: relative;
+}
+.project h2 {
+  margin: 50px 0;
+  font-size: 40px;
+  color: var(--yellow);
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 150px;
+  background: url(../public/img/bg.svg) no-repeat center;
+}
+
+.Projects {
+  transition: 1s all;
+  width: 100%;
+}
+
+.myProjects {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  width: 80%;
+  background: rgba(19, 19, 19, 1);
+  border-radius: 30px;
+}
+
+.myProjects img {
+  border-radius: 10px;
+  width: 60%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.myProjects .text {
   color: white;
+  font-family: var(--f-poppins);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 35px;
 }
 
-.App-link {
-  color: #61dafb;
+.yellowText {
+  color: var(--yellow);
+}
+.myProjects .text > p {
+  margin-bottom: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.myProjects .text .viewD {
+  margin-top: 40px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 1);
+  text-align: justify;
+  padding: 12px 24px;
+  background: var(--yellow);
+  border-radius: 3px;
+}
+
+.gif {
+  position: fixed;
+  background-color: rgba(45, 39, 39, 0.3);
+
+  width: 100%;
+  height: 100vh;
+}
+
+.gifImg {
+  width: 5%;
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: gifImg 1.6s;
+}
+
+@keyframes gifImg {
+  0% {
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.Menu {
+  width: 100%;
+  height: 100vh;
+  background: #000000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.close{
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 45px;
+  color: var(--yellow);
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+@media (max-width: 1050px) {
+  .main__left h2 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: normal;
+  }
+  h1 {
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+  }
+  .main__left h3 {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .hr {
+    margin: 20px 0 12px;
+    width: 40px;
+    height: 3px;
+  }
+  .main__left p {
+    font-size: 18px;
+    line-height: 27px;
+    text-align: justify;
+    width: 90%;
+    overflow: hidden;
+  }
+
+  .myProjects {
+    padding: 25px;
+    gap: 35px;
+    width: 80%;
+    background: rgb(26, 26, 26);
+  }
+  .myProjects img {
+    border-radius: 10px;
+    width: 55%;
+    height: 320px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 876px) {
+  main {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .main__right {
+    width: 80%;
+    /* position: relative; */
+    top: 0;
+  }
+
+  .main__right img {
+    width: 100%;
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: translate(-30%,0%);
+  }
+
+  .main__left {
+    text-align: center;
+    order: 2;
+  }
+  .main__left h2 {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: normal;
+  }
+  h1 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+  }
+  .main__left h3 {
+    font-size: 32px;
+    font-weight: 500;
+  }
+  .hr {
+    margin: 20px auto 12px;
+    width: 40px;
+    height: 3px;
+  }
+  .main__left p {
+    font-size: 22px;
+    line-height: 25px;
+    text-align: justify;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .myProjects {
+    padding: 20px;
+    gap: 15px;
+    width: 90%;
+    background: rgb(26, 26, 26);
+  }
+  .myProjects img {
+    border-radius: 10px;
+    width: 55%;
+    height: 280px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  header{
+    display: none;
+  }
+
+  .headerNone {
+    cursor: pointer;
+    display: block;
+    width: 40px;
+    padding-top: 30px;
+    fill: var(--yellow);
+    color: var(--yellow);
+  }
+
+  nav {
+    gap: 5px;
+  }
+  nav a svg {
+    width: 50px;
+    height: 50px;
+  }
+  nav p {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  
+
+  .main__right {
+    width: 100%;
+    /* position: relative; */
+    top: 0;
+  }
+
+  .main__right img {
+    transform: translate(-50%,0%);
+  }
+
+  .main__left h2 {
+    font-size: 28px;
+    font-weight: 500;
+  }
+  h1 {
+    font-size: 38px;
+  }
+  .main__left h3 {
+    font-size: 22px;
+  }
+  .main__left p {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: left;
+  }
+  .project h2 {
+    margin: 30px 0;
+    font-size: 40px;
+    color: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    background: url(../public/img/bg.svg) no-repeat center;
+  }
+  
+
+  .myProjects {
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 30px;
+    gap: 15px;
+    width: 90%;
+    background: rgb(26, 26, 26);
+  }
+  .myProjects img {
+    border-radius: 10px;
+    width: 100%;
+    height: 280px;
+  }
+  .myProjects .text {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 35px;
+  }
+  .myProjects .text > p {
+    margin-bottom: 20px;
+  }
+  .myProjects .text .viewD {
+    padding: 8px 18px;
+  }
+}
+
+
+@media (max-width: 390px) {
+
+  nav {
+    display: block;
+    text-align: center;
+}
+
+nav p {
+  margin-bottom: 20px;
+}
+
+  .Projects {
+    transition: 1s all;
+    width: 100%;
+  }
+  .myProjects {
+    padding: 10px;
+    padding-bottom: 20px;
+    gap: 15px;
+    width: 90%;
+    background: rgb(26, 26, 26);
+  }
+  .myProjects img {
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+  }
+  .main__left p {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
   }
 }
