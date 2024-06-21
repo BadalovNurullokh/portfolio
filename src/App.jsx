@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Projects from './Project';
 import { delay, motion } from 'framer-motion'
 
+
 const animation = {
   hidden: {
     x: -250,
@@ -98,7 +99,7 @@ function App() {
                   <a href="https://www.linkedin.com/in/nurullo-badalov-7924822a6/"><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect opacity="0.1" x="0.5" y="0.5" width="49" height="49" rx="24.5" fill="#FBFF22" stroke="#0F0F0F" />
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M22.429 21.969H26.143V23.819C26.678 22.755 28.05 21.799 30.111 21.799C34.062 21.799 35 23.917 35 27.803V35H31V28.688C31 26.475 30.465 25.227 29.103 25.227C27.214 25.227 26.429 26.572 26.429 28.687V35H22.429V21.969ZM15.57 34.83H19.57V21.799H15.57V34.83ZM20.143 17.55C20.1431 17.8853 20.0767 18.2172 19.9474 18.5266C19.8181 18.8359 19.6287 19.1165 19.39 19.352C18.9064 19.8326 18.2518 20.1017 17.57 20.1C16.8894 20.0995 16.2363 19.8312 15.752 19.353C15.5142 19.1167 15.3254 18.8358 15.1963 18.5264C15.0673 18.217 15.0006 17.8852 15 17.55C15 16.873 15.27 16.225 15.753 15.747C16.2369 15.2682 16.8902 14.9997 17.571 15C18.253 15 18.907 15.269 19.39 15.747C19.872 16.225 20.143 16.873 20.143 17.55Z" fill="#FBFF22" />
-                  </svg>git init
+                  </svg>
                   </a>
                 </nav>
                 <a href='tel:+996555888550' className='contact__btn'>Contact Me</a>
@@ -144,7 +145,7 @@ function App() {
                 <p>I'm Badalov Nurullokh, currently working in both frontend development and QA testing roles. Having completed my frontend training and worked on several projects, I aim to uphold the quality standards and user satisfaction through rigorous testing and development processes. <br />My goal is to ensure a seamless user experience and optimal functionality of software products as a front-end developer and tester. </p>
               </motion.div>
               <motion.div whileInView="visible" initial="hidden" variants={animation1} className="main__right">
-                <img src="img/image (2).png" alt="" />
+                <img src="img/images.png" alt="" />
               </motion.div>
             </main>
 
